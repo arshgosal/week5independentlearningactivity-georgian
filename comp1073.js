@@ -13,12 +13,30 @@ const jess = {
   }
 }
 
+const chris = {
+    fName: 'Chris',
+    lName: 'Pander',
+    program: 'COPR',
+    homeCity: 'Barrie',
+    interest: ['hockey', 'coding', 'gaming', 'football'],
+    hi: function(){
+        alert('Hi, I am ' + chris.fName + ' ' + chris.lName);
+    },
+    bio: function(){
+        alert('My name is ' + chris.fName + ' ' + chris.lName + '. I\'m enrolled in the ' + chris.program + ' program. I live in ' + chris.homeCity + ' where I enjoy ' + chris.interest[0] + ', ' + chris.interest[1] + ', ' + chris.interest[2] + ', and ' + chris.interest[3] + '.')
+    }
+}
 
 //add event listener function or event handler property here 
 
 let button = document.getElementById('jess'); 
+let chrisButton = document.getElementById('chris');
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
   jess.bio(); 
-})
+});
+
+chrisButton.addEventListener('click', function(){
+  chris.bio();
+});
