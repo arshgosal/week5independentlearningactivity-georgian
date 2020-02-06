@@ -48,15 +48,33 @@ intro={
 }
 delete intro.name.last;
 
+let anmol = {
+  firstName: 'ANMOL',
+  lastName:  'SHARMA',
+  age: 19,
+  program: 'Computer Programming',
+  interests: ['Songs','Basketball'],
+  Intro: function(){
+    alert('Hi, I am'+anmol.firstName+" "+ anmol.lastName);
+  },
+  Info: function(){
+    alert("Here is my info"+anmol.firstName+" "+anmol.lastName+" "+anmol.age+" "+anmol.program+" "+anmol.interests[0]+" "+anmol.interests[1]);
+  }
+};
+
 //add event listener function or event handler property here 
 
 let button = document.getElementById('jess'); 
 let chrisButton = document.getElementById('chris');
+let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
   jess.bio(); 
+});
+button.addEventListener('click', function(){
+  anmol.bio(); 
 });
 
 chrisButton.addEventListener('click', function(){
